@@ -1,0 +1,199 @@
+* {
+  margin: 0; /*기본 설정된 마진 없애기*/
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+ul {
+  list-style: none; /*리스트 점 생기는거 방지*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box; /*content영역과 테두리영역을 합쳐서 설정한 width나 height가 되게하는 것 */
+}
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  tab-size: 4;
+}
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+li,
+a {
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.bg {
+  background-color: #1b1d22;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  font-family: "GenWanMin TW TTF";
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #aa101a;
+  color: #1c1d1f;
+  stroke-width: 4;
+  font-size: 200px;
+  letter-spacing: 8px;
+  filter: blur(2px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-46%, -50%);
+}
+
+.title {
+  animation: blink 0.9s ease-in-out 4 forwards;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.title-on {
+  display: none;
+}
+
+.title-fill {
+  color: #aa101a;
+  font-family: "GenWanMin TW TTF";
+  font-size: 200px;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-46%, -50%);
+  z-index: 10;
+}
+
+.title-blur {
+  color: #aa101a;
+  font-family: "GenWanMin TW TTF";
+  font-size: 200px;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-46%, -50%);
+  filter: blur(25px);
+  z-index: 5;
+}
+
+.flow-text,
+.flow-text-bottom {
+  display: flex;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.3s;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(9, 9, 9);
+  -webkit-text-stroke: 1px #aa101a;
+}
+
+.flow-text:hover,
+.flow-text-bottom:hover {
+  color: #aa101a;
+}
+
+.flow-text:hover .flow-wrap,
+.flow-text-bottom:hover .flow-wrap {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.flow-wrap {
+  animation: textLoop 10s linear infinite;
+  padding-right: 3vw;
+}
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.flow-container-bottom,
+.flow-container {
+  padding: 24px;
+  background-color: rgb(9, 9, 9);
+}
+
+.flow-container {
+  border-bottom: 2px solid #aa101a;
+}
+/* Positioning styles for both classes (optional) */
+.flow-container-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid #aa101a;
+}
+
+.photo1 {
+  width: 700px;
+  height: 500px;
+  transform: rotate(-24.549deg);
+  margin-left: 1220px;
+  margin-top: 350px;
+}
+
