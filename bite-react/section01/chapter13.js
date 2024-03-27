@@ -2,9 +2,7 @@
 function main(value){
   value();
 }
-
-
-
+ 
 main(() => {
   // console.log("i'm sub");
 });

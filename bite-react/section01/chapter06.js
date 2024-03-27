@@ -1,7 +1,7 @@
 // 1. 묵시적 형 변환
 // 자바스크립트 엔진이 알아서 형 변환하는 것
 
-let num = 10;
+let ㄹnum = 10;
 let str = "20";
 
 const result =num+str;
@@ -19,7 +19,7 @@ let strToNum1 = Number(str1);
 
 let str2 = "10개";
 let strToNum2 = parseInt(str1);//숫자값이 아닌 다른 값이 들어가있는 걸 형 변환하려면 parseInt로다가, 숫자가 앞에 있어야지 잘 변환됨
-// console.log(strToNum2);
+console.log(strToNum2);
 
 
 //숫자 -> 문자열
